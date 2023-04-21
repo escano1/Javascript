@@ -1,0 +1,65 @@
+:root{
+    --blanco: #d7dce0;
+    --oscuro: #212121;
+    --azul: #002e43;
+    --azul-claro: #6a90a9;
+    --gris-suave : #b2c3d3;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+}
+
+.servicios {
+    text-align: center;
+    color : var(--azul);
+    padding: 2rem 0rem 0rem 0rem;  
+}
+
+.contenedor{
+    width: 100rem;
+    margin: 0 auto;
+
+}
+
+.ext-nav{
+    background-color: var(--azul);
+}
+
+.navegacion-principal{
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.navegacion-principal a {
+    text-decoration: none;
+    color : var(--blanco);
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--gris-suave);
+    color: var(--oscuro);
+}
+
+.servicios-nav{
+   display: flex; 
+   justify-content: space-between;
+}
+
+.servicios-main {
+   background-color: var(--azul-claro) ; 
+
+}
+
+.nosotros {
+    background-color: var(--gris-suave);
+}
+
