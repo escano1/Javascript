@@ -16,7 +16,7 @@
 
 </head>
 <body>
-<div class="ext-nav">
+<header class="ext-nav">
     <nav class="navegacion-principal contenedor">
         <a href="index.html">Inicio</a>
         <a href="nosotros.html">Nosotros</a>
@@ -24,40 +24,40 @@
         <a href="proyectos.html">Proyectos</a>
         <a href="contacto.html">Contacto</a>
     </nav>
-</div>
+</header>
 
 <main>
     <section class="contenedor">
         <h2>Contacto</h2>
 
-        <form>
+        <form class="formulario">
             <fieldset>
                 <legend>Contactanos llenando todos los campos</legend>
-                <div>
-                    <label>Nombre</label>
-                <input type="text" placeholder="Tu Nombre">
-                </div>
-                
-                <div>
-                    <label>Telefono</label>
-                    <input type="tel" placeholder="Tu Telefono">
-                </div>
-                
-                <div>
-                    <label>Correo</label>
-                    <input type="email" placeholder="Tu Email">
-                </div>
-                
-                <div>
-                    <label>Mensaje</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
-
-                <div>
-                    <input type="submit" value="Enviar">
-                </div>
-                
-
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            <label>Nombre</label>
+                        <input class="input-text" type="text" placeholder="Tu Nombre">
+                        </div>
+                        
+                        <div class="campo">
+                            <label>Telefono</label>
+                            <input class="input-text" type="tel" placeholder="Tu Telefono">
+                        </div>
+                        
+                        <div class="campo">
+                            <label>Correo</label>
+                            <input class="input-text" type="email" placeholder="Tu Email">
+                        </div>
+                        
+                        <div class="campo">
+                            <label>Mensaje</label>
+                            <textarea cols="30" rows="10"></textarea>
+                        </div>
+                    </div><!-- .contenedor-campos -->
+                    <div class="alinear-derecha flex">
+                        <input class="boton w-sm-100" type="submit" value="Enviar">
+                    </div>
+                    
             </fieldset>
         </form>
 
