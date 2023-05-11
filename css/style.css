@@ -249,6 +249,12 @@ h1,h2,h3,h4 {
 .footer{
     background-color: var(--gris-suave);
 }
+@media (min-width: 768px){
+    .footer {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
 
 .footer__nombre{
     text-align: left;
@@ -261,13 +267,13 @@ h1,h2,h3,h4 {
 }
 
 .footer__contacto {
-    padding: 2rem 0rem 2rem 0rem;
+    padding: 4rem 0rem 2rem 0rem;
     text-transform: uppercase;
     text-align: left;
 }
 
 .footer__ubicacion {
-    padding: 1rem;
+    padding-bottom  : 4rem;
 }
 
 .footer__escribenos {
