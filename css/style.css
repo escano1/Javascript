@@ -28,7 +28,7 @@ html{
 /** Globales **/
 
 .contenedor{
-    max-width: 100rem;
+    max-width: 120rem;
     width: 90%;
     margin: 0 auto;
 }
@@ -106,8 +106,9 @@ h1,h2,h3,h4 {
     display: block;
     text-align: center;
     font-size: 1.8rem;
-    margin-top: 1rem;
-    color: var(--gris-suave);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    color: var(--blanco);
 }
 
 @media (min-width: 768px){
@@ -116,11 +117,6 @@ h1,h2,h3,h4 {
         gap: 6rem;
     }
 }
-
-
-
-
-
 
 /**-----------------------------**/
 
@@ -161,17 +157,23 @@ h1,h2,h3,h4 {
 }
 
 .imagen__texto h2{
-    color: var(--azul-claro);
-}
-
-.titulo-servicios {
-    color : var(--azul);
-    padding: 2rem 0rem 0rem 0rem;  
+    color: var(--blanco);
 }
 
 
 
 /* servicios */
+
+.servicios-main {
+    background-color: var(--azul-claro) ; 
+ }
+
+ .titulo-servicios {
+    color : var(--azul);
+    padding: 4rem 0rem 2rem 0rem;
+    margin: 0rem 0rem 2rem 0rem;  
+}
+
 
 @media (min-width: 768px){
     .servicios-nav{
@@ -187,13 +189,16 @@ h1,h2,h3,h4 {
     align-items: center;
 }
 
+
 .logotipos{
-    width: 10rem;
-    height: 10rem;
+    width: 9rem;
+    height: 9rem;
 }
 
 
 .servicio .iconos{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     height: 15rem;
     width: 15rem;
     background-color: var(--gris-suave);
@@ -210,21 +215,80 @@ h1,h2,h3,h4 {
 .servicio p{
     line-height: 2;
     text-align: center;
+    padding-bottom: 2rem;
+}
 
+/** Seccion Nosotros **/
+
+
+.contenido__nosotros {
+    
+}
+
+@media (min-width: 768px){
+    .contenido__nosotros{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.nosotros__titulo{
+    margin: 2rem 0rem 2rem 0rem;
 }
 
 
+/** video nosotros **/
 
-.servicios-main {
-   background-color: var(--azul-claro) ; 
-   margin-top: 0rem;
-
+.sidebar{
+    margin: 2rem 0rem 2rem 0rem ;
 }
 
-.nosotros {
+/** footer **/
+
+.footer{
     background-color: var(--gris-suave);
 }
 
+.footer__nombre{
+    text-align: left;
+    font-weight: 400;
+    padding: 4rem;
+}
+
+.footer__bold {
+    font-weight: 700;
+}
+
+.footer__contacto {
+    padding: 2rem 0rem 2rem 0rem;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.footer__ubicacion {
+    padding: 1rem;
+}
+
+.footer__escribenos {
+    padding: 4rem 0rem 0rem 0rem;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.footer__correo {
+    padding: 2rem;
+}
+
+.derechos {
+    background-color: #212121;
+}
+
+.derechos__parrafo {
+    color: var(--azul-claro);
+    padding: 4rem;
+    text-align: center;
+}
 
 /* Contacto*/
 
