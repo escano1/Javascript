@@ -1,9 +1,9 @@
 :root{
     --blanco: #d7dce0;
     --oscuro: #212121;
-    --azul: #002e43;
-    --azul-claro: #6a90a9;
-    --gris-suave : #b2c3d3;
+    --azul: #1b1f47;
+    --azul-claro: #4c5d8b;
+    --gris-suave : #6e8bb3;
 }
 *{
     margin: 0;
@@ -147,7 +147,7 @@ h1,h2,h3,h4 {
 
 .imagen__texto{
     position: absolute;
-    background-color:rgba(0, 0, 0, .3) ;
+    background-color:rgba(0, 0, 0, .5) ;
     width: 100%;
     height: 100%;
     display: flex;
@@ -157,7 +157,7 @@ h1,h2,h3,h4 {
 }
 
 .imagen__texto h2{
-    color: var(--blanco);
+    color: rgb(198, 198, 198);
 }
 
 
@@ -296,7 +296,83 @@ h1,h2,h3,h4 {
     text-align: center;
 }
 
+/** Nosotros **/
+.nosotros__main {
+    background-image: url("../imagenes/equipo.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 15rem 5rem 5rem 5rem;
+}
+
+.acerca__nosotros {
+    width: 100%; /* Ancho del cuadro */
+    margin: 0 auto; /* Centrar el cuadro horizontalmente */
+    background: linear-gradient(to top,#1a203c,#070707);/* Color de fondo del cuadro */
+
+}
+
+.acerca__nosotros h1 {
+    text-align: left;
+    text-transform: uppercase;
+    padding: 5rem 0rem 2rem 7rem;
+    color: #4776b9;
+}
+
+.acerca__nosotros p {
+    text-align: left;
+    padding: 0rem 5rem 5rem 7rem;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+@media (min-width: 768px){
+    .acerca__nosotros{
+        width: 90%;
+    }
+
+}
+
+.segmentos {
+    background: linear-gradient(to top,#1a203c,#070707);
+    color: #ffffff;
+}
+
+.segmentos__titulo{
+    padding: 2rem;
+}
+
+.segmentos__titulo h2 {
+    font-size: 4rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.segmentos__listas{
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+@media (min-width: 768px){
+    .segmentos__titulo{
+        padding: 12rem;
+    }
+    
+    .segmentos__listas{
+        padding: 11rem;
+    }
+}
+
+
 /* Contacto*/
+
+.contacto__fondo{
+    background: linear-gradient(to top,#070707, var(--azul));
+}
+
+.contacto__titulo{
+    color: #ffffff;
+    padding: 5rem;
+}
 
 .formulario {
     background-color: var(--gris-suave);
