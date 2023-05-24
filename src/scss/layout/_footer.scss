@@ -1,0 +1,51 @@
+@use '../base/variables' as v;
+
+.footer{
+    background-color: v.$gris-suave;
+}
+@media (min-width: 768px){
+    .footer {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+.footer__nombre{
+    text-align: left;
+    font-weight: 400;
+    padding: 4rem;
+}
+
+.footer__bold {
+    font-weight: 700;
+}
+
+.footer__contacto {
+    padding: 4rem 0rem 2rem 0rem;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.footer__ubicacion {
+    padding-bottom  : 4rem;
+}
+
+.footer__escribenos {
+    padding: 4rem 0rem 0rem 0rem;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.footer__correo {
+    padding: 2rem;
+}
+
+.derechos {
+    background-color: #212121;
+}
+
+.derechos__parrafo {
+    color: v.$azul-claro;
+    padding: 4rem;
+    text-align: center;
+}

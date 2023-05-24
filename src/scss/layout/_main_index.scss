@@ -1,0 +1,82 @@
+@use '../base/variables' as v;
+
+
+.servicios-main {
+    background-color: v.$azul-claro ; 
+ }
+
+ .titulo-servicios {
+    color : v.$azul;
+    padding: 4rem 0rem 2rem 0rem;
+    margin: 0rem 0rem 2rem 0rem;  
+}
+
+
+@media (min-width: 768px){
+    .servicios-nav{
+        display: grid; 
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 1rem;
+     }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.logotipos{
+    width: 9rem;
+    height: 9rem;
+}
+
+
+.servicio .iconos{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 15rem;
+    width: 15rem;
+    background-color: v.$gris-suave;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicio h3{
+    color: v.$azul;
+}
+
+.servicio p{
+    line-height: 2;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+/** Seccion Nosotros **/
+
+
+.contenido__nosotros {
+    
+}
+
+@media (min-width: 768px){
+    .contenido__nosotros{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.nosotros__titulo{
+    margin: 2rem 0rem 2rem 0rem;
+}
+
+
+/** video nosotros **/
+
+.sidebar{
+    margin: 2rem 0rem 2rem 0rem ;
+}
