@@ -566,7 +566,7 @@ h1, h2, h3, h4 {
 }
 
 .nosotros__main {
-  background-image: url("../../../imagenes/equipo.jpg");
+  background-image: url("../../imagenes/equipo.jpg");
   background-size: cover;
   background-position: center;
   padding: 15rem 5rem 5rem 5rem;
