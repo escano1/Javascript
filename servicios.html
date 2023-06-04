@@ -5,84 +5,140 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingenieria Electrica</title>
-    <link rel="preload" href="css/normalize.css">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/style.css" as="style">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="build/css/app.css" as="style">
+    <link rel="stylesheet" href="build/css/app.css">
 
 
 </head>
 <body>
-<div class="ext-nav">
-    <nav class="navegacion-principal contenedor">
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="contacto.html">Contacto</a>
+    <header class="header"> 
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">Franco<span class="logo__bold">DeMan</span></h1>   
+                </a>
+                <nav class="navegacion">
+                    <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+                    <a class="navegacion__enlace" href="servicios.html">Servicios</a>
+                    <a class="navegacion__enlace" href="clientes.html">Clientes</a>
+                    <a class="navegacion__enlace" href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </div>    
+    </header>
+<div class="navegacion__contenedor">
+    <nav class="navegacion__secundaria contenedor">
+        <ul class="navegacion__servicios">
+            <li class="navegacion__lista"><a class="navegacion__servicio" href="#seccion1">Instalaciones Electricas</a></li>
+            <li class="navegacion__lista"><a class="navegacion__servicio" href="#seccion2">Mantenimiento</a></li>
+            <li class="navegacion__lista"><a class="navegacion__servicio" href="#seccion3">Diseño</a></li>
+        </ul>
     </nav>
 </div>
 
 <main>
+    <section id="seccion1">
+        <div class="contenedor">
 
-<div class="contenedor">
-    <section>
-        <h1>Servicios</h1>
-    </section>
-    <section>
-        <h2>Instalaciones Electricas</h2>
-    </section>
-    <section>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sit et dicta? Atque deserunt provident soluta fugit, obcaecati laudantium ratione voluptates iure illo dolores necessitatibus dicta, vel cum temporibus excepturi.</p>
-        <ul>
-            <li>Servicio 1</li>
-            <li>Servicio 2</li>
-            <li>Servicio 3</li>
-        </ul>
-    </section>
-</div>
+            <section class="servicio1__titulo">
+                <h2>Instalaciones Electricas</h2>
+            </section>
+            
+            <section>
+                <div class="servicio1__contenido">
+                    <img class="img__instalaciones" src="imagenes/instalaciones_electricas.jpg" alt="img de Instalaciones electricas">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sit et dicta? Atque deserunt provident soluta fugit, obcaecati laudantium ratione voluptates iure illo dolores necessitatibus dicta, vel cum temporibus excepturi.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sit et dicta? Atque deserunt provident soluta fugit, obcaecati laudantium ratione voluptates iure illo dolores necessitatibus dicta, vel cum temporibus excepturi</p>
+                    </div>
+                </div>
+                <div>
+                    <ul class="servicio1__listas">
+                        <li>Servicio 1</li>
+                        <li>Servicio 2</li>
+                        <li>Servicio 3</li>
+                    </ul> 
+                </div>            
+            </section>
+        </div>
+      </section>
+      
+      <section id="seccion2">
+        <div class="contenedor">
+            <section class="servicio1__titulo">
+                <h2>Mantenimiento</h2>
+            </section>
 
-<div class="contenedor">
-    <section>
-        <h2>Mantenimiento</h2>
-    </section>
-    <section>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sit et dicta? Atque deserunt provident soluta fugit, obcaecati laudantium ratione voluptates iure illo dolores necessitatibus dicta, vel cum temporibus excepturi.</p>
-        <ul>
-            <li>Servicio 1</li>
-            <li>Servicio 2</li>
-            <li>Servicio 3</li>
-        </ul>
-    </section>
-</div>
+            <section>
+                <div class="servicio1__contenido">
+                    <img class="img__mantenimiento" src="imagenes/mantenimiento.jpg" alt="img de mantenimiento">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sit et dicta? Atque deserunt provident soluta fugit, obcaecati laudantium ratione voluptates iure illo dolores necessitatibus dicta, vel cum temporibus excepturi.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sit et dicta? Atque deserunt provident soluta fugit, obcaecati laudantium ratione voluptates iure illo dolores necessitatibus dicta, vel cum temporibus excepturi</p>        
+                    </div>
+                </div>
+             <ul class="servicio1__listas">
+                    <li>Servicio 1</li>
+                    <li>Servicio 2</li>
+                    <li>Servicio 3</li>
+                </ul>
+            </section>
+        </div>
+      </section>
+      
+      <section id="seccion3">
+        <div class="contenedor">
+            <section class="servicio1__titulo">
+                <h2>Diseño</h2>
+            </section>
 
-<div class="contenedor">
-    <section>
-        <h2>Diseño</h2>
-    </section>
-    <section>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sit et dicta? Atque deserunt provident soluta fugit, obcaecati laudantium ratione voluptates iure illo dolores necessitatibus dicta, vel cum temporibus excepturi.</p>
-        <ul>
-            <li>Servicio 1</li>
-            <li>Servicio 2</li>
-            <li>Servicio 3</li>
-        </ul>
-    </section>
-</div>
-
+            <section>
+                <div class="servicio1__contenido">
+                    <img class="img__diseño" src="imagenes/diseño_electrico.jpg" alt="img de mantenimiento">
+                
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sit et dicta? Atque deserunt provident soluta fugit, obcaecati laudantium ratione voluptates iure illo dolores necessitatibus dicta, vel cum temporibus excepturi.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sit et dicta? Atque deserunt provident soluta fugit, obcaecati laudantium ratione voluptates iure illo dolores necessitatibus dicta, vel cum temporibus excepturi</p>    
+                    </div>
+                </div>
+                <ul class="servicio1__listas">
+                    <li>Servicio 1</li>
+                    <li>Servicio 2</li>
+                    <li>Servicio 3</li>
+                </ul>
+            </section>
+        </div>
+      </section>
 
 </main>
 
-
-
-
-<footer class="contenedor">
-
-    <h3>Contactanos</h3>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad corporis molestiae laboriosam ab laborum nostrum quaerat. Beatae consequatur perferendis accusamus sed dolorum excepturi rerum provident perspiciatis maiores repudiandae, hic voluptatibus.</p>  
+<div class="footer">
+    <section class="contenedor">
+        
+            <h1 class="footer__nombre no-margin centrar-texto">Franco<span class="footer__bold">DeMan</span></h1>      
+    </section>
+    <section>
+        <h3 class="footer__contacto">Contactanos</h3>
+        <ul>
+            <li class="footer__ubicacion">Ubicacíon 1</li>
+            <li class="footer__ubicacion">Ubicacíon 2</li>
+        </ul>
+    </section>
+    <section>
+        <h3 class="footer__escribenos">escríbenos</h3>
+        <p class="footer__correo">francodemansas@gmail.com</p> 
+    </section>
+</div>
+<footer class="derechos">
+    <div class="contenedor">
+        <p class="derechos__parrafo">Desarrollado por desarrollador 3000 ultra the best pro in the world, todos los derechos reservados para miiiiiiiiiiiiiiiiiiiiiiiiiiiiii</p>
+    </div>
 </footer>
 
 </body>

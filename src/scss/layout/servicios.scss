@@ -1,0 +1,86 @@
+@use '../base/variables' as v;
+
+
+.navegacion__servicio {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: v.$blanco;
+}
+
+.navegacion__contenedor{
+    background-color: v.$blanco;
+    .navegacion__secundaria {
+    
+        .navegacion__servicios {
+        list-style-type: none;
+    
+        .navegacion__lista {
+            margin-right: 10px;
+    
+            .navegacion__servicio {
+            text-decoration: none;
+            color: #000;
+            transition: color 0.3s;
+    
+            &:hover {
+                color: v.$gris-suave;    
+          }
+        }
+      }
+    }
+  }
+}
+
+  @media (min-width: 768px){
+    .navegacion__servicios {
+        display: flex;
+        justify-content: center;
+        gap: 6rem;
+    }
+}
+
+.servicio1__titulo h2{
+  color: v.$gris-suave;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 1rem 0rem 2rem 1rem;
+  font-size: 3rem;
+
+}
+
+.img__instalaciones {
+  width: 100%;
+}
+
+
+.servicio1__contenido p {
+  color: #000000a5;
+}
+
+@media (min-width: 768px){
+    .servicio1__contenido {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+  }
+
+.servicio1__listas{
+  list-style-image: url(../../../imagenes/thunder.png);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 4rem;
+
+}
+
+.img__mantenimiento{
+ width: 43%;
+}
+
+.img__diseño{
+  width: 100%;
+ }
+ 

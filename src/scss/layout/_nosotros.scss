@@ -1,0 +1,67 @@
+@use '../base/variables' as v;
+
+.nosotros__main {
+    background-image: url("../../../imagenes/equipo.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 15rem 5rem 5rem 5rem;
+}
+
+.acerca__nosotros {
+    width: 100%; /* Ancho del cuadro */
+    margin: 0 auto; /* Centrar el cuadro horizontalmente */
+    background: linear-gradient(to top,#1a203c,#070707);/* Color de fondo del cuadro */
+
+}
+
+.acerca__nosotros h1 {
+    text-align: left;
+    text-transform: uppercase;
+    padding: 5rem 0rem 2rem 7rem;
+    color: #4776b9;
+}
+
+.acerca__nosotros p {
+    text-align: left;
+    padding: 0rem 5rem 5rem 7rem;
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+@media (min-width: 768px){
+    .acerca__nosotros{
+        width: 90%;
+    }
+
+}
+
+.segmentos {
+    background: linear-gradient(to top,#1a203c,#070707);
+    color: #ffffff;
+}
+
+.segmentos__titulo{
+    padding: 2rem;
+}
+
+.segmentos__titulo h2 {
+    font-size: 4rem;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.segmentos__listas{
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+@media (min-width: 768px){
+    .segmentos__titulo{
+        padding: 4rem;
+    }
+    
+    .segmentos__listas{
+        padding: 3rem;
+        list-style-position: inside;
+    }
+}
