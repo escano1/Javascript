@@ -70,6 +70,8 @@
     color: v.$gris-suave;
 }
 
+/** header con imagen estatica **/
+/**
 .imagen{
     background-image: url(../../imagenes/equipo.jpg);
     background-repeat: no-repeat;
@@ -92,4 +94,39 @@
 
 .imagen__texto h2{
     color: rgb(198, 198, 198);
+}
+**/
+
+/** header con video bien bonito **/
+
+.video {
+    position: relative;
+
+    .video__texto__posicion{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        
+        background: rgb(67,162,247);
+        background: linear-gradient(90deg, rgba(67,162,247,0.3) 0%, rgba(9,24,121,0.29744397759103647) 50%, rgba(0,255,149,0.303046218487395) 100%);
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    video{
+        width: 100%;
+        display: block;
+    }
+}
+
+.video__contenido {
+
+    h2 {
+
+        color: v.$blanco;
+        font-size: 4rem;
+    }
 }

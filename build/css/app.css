@@ -424,28 +424,54 @@ h1, h2, h3, h4 {
   color: #6e8bb3;
 }
 
-.imagen {
-  background-image: url(../../imagenes/equipo.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  height: 60rem;
+/** header con imagen estatica **/
+/**
+.imagen{
+    background-image: url(../../imagenes/equipo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 60rem;
+    position: relative;
+}
+
+.imagen__texto{
+    position: absolute;
+    background-color:rgba(0, 0, 0, .5) ;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen__texto h2{
+    color: rgb(198, 198, 198);
+}
+**/
+/** header con video bien bonito **/
+.video {
   position: relative;
 }
-
-.imagen__texto {
+.video .video__texto__posicion {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
+  background: rgb(67, 162, 247);
+  background: linear-gradient(90deg, rgba(67, 162, 247, 0.3) 0%, rgba(9, 24, 121, 0.2974439776) 50%, rgba(0, 255, 149, 0.3030462185) 100%);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
+.video video {
+  width: 100%;
+  display: block;
+}
 
-.imagen__texto h2 {
-  color: rgb(198, 198, 198);
+.video__contenido h2 {
+  color: #d7dce0;
+  font-size: 4rem;
 }
 
 .servicios-main {
