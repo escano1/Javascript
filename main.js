@@ -1,70 +1,66 @@
-
-// Generar un número aleatorio entre 1 y 10
-const numeroAleatorio = Math.floor(Math.random() * 10) + 1;
-let intentos = 4;
-
-// Instrucciones para jugar
-
-
-function adivinar(){
-
-  for (let i = 1; i <= intentos; i++) {
-    // Solicitar al usuario que ingrese un número
-    const numeroUsuario = parseInt(prompt("Intento #" + i + ": Adivina el número (entre 1 y 10):"));
-
-    // Verificar si el número es correcto
-    if (numeroUsuario === numeroAleatorio) {
-      console.log("¡Felicitaciones! Adivinaste el número.");
-      break;
-
-    } else if (i < intentos) {
-      // Mostrar pista
-
-          if(numeroUsuario < numeroAleatorio){
-              console.log('El numero es mayor');
-          }
-          else{
-              console.log('El numero es menor');
-          }
-
-    } else {
-      alert("Lo siento, agotaste tus intentos. El número era " + numeroAleatorio + ".");
-    }
+class Servicio {
+  constructor(nombre, costo) {
+    this.nombre = nombre;
+    this.costo = costo;
   }
-}
 
-alert('Tendras 4 oportunidades para ganar, abre la consola para ver las pistas en caso de fallar')
+  static lista = [];
 
-adivinar()
+  static calcularServicio() {
 
-/*
-const iva = 1.19
+    const lista_servicios = ["Instalacion_electrica","Mantenimiento","Diseño"]
 
-class Producto{
-  constructor(id,nombre,importe,stock){
-    this.id = id
-    this.nombre = nombre
-    this.importe = importe
-    this.stock = stock
+    let instalacion_electrica = 0;
+    let mantenimiento = 0;
+    let diseño = 0;
 
-    this.importeConIva = function(){
-      return this.importe * iva
-    }
+    for (let i = 0; i < lista_servicios.length; i++) {
+      let servicio = confirm("Desea servicio de: " + lista_servicios[i]);
 
-    this.ajustarStock = function(unidadesVendidas){
-      if(typeof unidadesVendidas === 'number' && this.stock >= unidadesVendidas && stock > 0){
-        return this.stock = this.stock - parseInt(unidadesVendidas)
+      if (i === 0 && servicio === true) {
+        let mt2_instalacion = parseFloat(prompt("¿Cuantos metros cuadrados requiere la instalacion electrica?"));
+        instalacion_electrica = mt2_instalacion * 80000;
+      } else if (i === 1 && servicio === true) {
+        let medidores = parseInt(prompt("¿Cuantos medidores requieren mantenimiento?"));
+        mantenimiento = medidores * 50000;
+      } else if (i === 2 && servicio === true) {
+        let mt2_diseño = parseFloat(prompt("¿Cuantos metros cuadrados de diseño electrico necesitas?"));
+        diseño = mt2_diseño * 10000;
       }else{
-        console.error("error al descontar las unidades, "+unidadesVendidas)
+        instalacion_electrica = 0;
+        mantenimiento = 0;
+        diseño = 0;
       }
     }
+
+    let servicio1 = new Servicio("Instalacion electrica", instalacion_electrica);
+    let servicio2 = new Servicio("Mantenimiento", mantenimiento);
+    let servicio3 = new Servicio("Diseño", diseño);
+    Servicio.lista = [servicio1, servicio2, servicio3];
+    console.table(Servicio.lista);
   }
+
+  static agregarServicioAdicional(nombre) {
+    let costo;
+    if (nombre === "Diseño") {
+      let mt2_diseño = parseFloat(prompt("¿Cuantos metros cuadrados de diseño electrico necesitas?"));
+      costo = mt2_diseño * 10000;
+    } else if (nombre === "Mantenimiento") {
+      let medidores = parseInt(prompt("¿Cuantos medidores requieren mantenimiento?"));
+      costo = medidores * 50000;
+    } else if (nombre === "Instalacion_electrica") {
+      let mt2_instalacion = parseFloat(prompt("¿Cuantos metros cuadrados requiere la instalacion electrica?"));
+      costo = mt2_instalacion * 80000;
+    } else {
+      console.log("No se puede agregar un servicio diferente a Diseño, Mantenimiento o Instalacion electrica.");
+      return;
+    }
+
+    const nuevoServicio = new Servicio(nombre, costo);
+    Servicio.lista.push(nuevoServicio);
+    console.table(Servicio.lista);
+  } 
 }
 
-const producto1 = new Producto(1,"teclado", 50000, 15)
-const producto2 = new Producto(2,"monitor", 120000, 6)
-const producto3 = new Producto(3,"mouse", 35000, 35)
-
-console.log(producto1.importeConIva())
-console.log(producto1.ajustarStock(20))
-*/
+// Llamar al método estático de la clase Servicio
+Servicio.calcularServicio();
