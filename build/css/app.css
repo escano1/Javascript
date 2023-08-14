@@ -851,3 +851,32 @@ h1, h2, h3, h4 {
   max-width: 50%;
   height: auto;
 }
+
+.clase_comun_cotizar {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Opcional: para alinear verticalmente en el centro */
+}
+.clase_comun_cotizar button {
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #ffffff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.clase_comun_cotizar button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+#divCotizar button {
+  margin-top: 20px;
+}
+
+.Agregar_Servicio_div {
+  margin-top: 20px;
+  margin-bottom: 2rem;
+}
