@@ -32,12 +32,47 @@
     </header>
 
 <main>
-    <div class="cotizacion_div clase_comun_cotizar">
-        <div id="divCotizar"></div>
+    <h1 class="titulo_cotizacion">Servicios Eléctricos</h1>
+
+    <div class="cheklist__servicios contenedor">
+        <label for="instalacion">¿Desea servicio de Instalación eléctrica?</label>
+        <input type="checkbox" id="instalacion">
+        <br>
+        <label for="mantenimiento">¿Desea servicio de Mantenimiento?</label>
+        <input type="checkbox" id="mantenimiento">
+        <br>
+        <label for="diseno">¿Desea servicio de Diseño eléctrico?</label>
+        <input type="checkbox" id="diseno">
     </div>
 
-    <div class="Agregar_Servicio_div clase_comun_cotizar">
-        <div id="divAgregarServicio"></div>
+    <div class="contenedor" id="inputInstalacion" style="display: none;">
+        <label for="mt2_instalacion">Metros cuadrados para Instalación eléctrica:</label>
+        <input type="number" id="mt2_instalacion">
+        <br>
+    </div>
+
+    <div class="contenedor" id="inputMantenimiento" style="display: none;">
+        <label for="medidores">Número de medidores para Mantenimiento:</label>
+        <input type="number" id="medidores">
+        <br>
+    </div>
+
+    <div class="contenedor" id="inputDiseno" style="display: none;">
+        <label for="mt2_diseno">Metros cuadrados de Diseño eléctrico:</label>
+        <input type="number" id="mt2_diseno">
+        <br>
+    </div>
+
+    <button class="contenedor boton_calculo_servicio" onclick="calcularServicio()">Calcular Servicio</button>
+
+    <div class = "resultados contenedor" id="resultados">
+        <h2>Resultados</h2>
+        <table>
+            <tr>
+                <th>Servicio</th>
+                <th>Costo</th>
+            </tr>
+        </table>
     </div>
 
 </main>

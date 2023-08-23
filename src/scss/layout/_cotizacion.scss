@@ -1,34 +1,100 @@
-.clase_comun_cotizar{
+@use '../base/variables' as v;
 
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Opcional: para alinear verticalmente en el centro */
+.cheklist__servicios {
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+  }
+  
+
+  .cheklist__servicios label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+
+  .cheklist__servicios input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .cheklist__servicios input[type="checkbox"]:checked + label {
+    color: v.$azul; 
+  }
+  
+
+  .cheklist__servicios input[type="checkbox"]:hover + label {
+    color: v.$azul; 
+    cursor: pointer;
+  }
+
+--------
+
+.titulo_cotizacion{
+    color: v.$azul;
+}
 
 
-    button {
-        font-size: 16px;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        background-color: #3498db;
-        color: #ffffff;
-        transition: background-color 0.3s ease, transform 0.2s ease;
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.boton_calculo_servicio {
+    background-color: v.$azul;
+    color: v.$blanco;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: block;
+    margin: 20px auto;
+}
+
+.boton_calculo_servicio:hover {
+    transform: scale(1.01); /* Agrandar un poco al pasar el cursor */
+}
+
+.resultados{
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
     }
 
-    button:hover {
-        background-color: #2980b9;
-        transform: scale(1.05);
+    th, td {
+        padding: 10px;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #333;
+        color: #fff;
     }
 }
 
 
-
-#divCotizar button {
+#resultados {
     margin-top: 20px;
 }
 
-.Agregar_Servicio_div{
-    margin-top: 20px;
-    margin-bottom: 2rem;
+#inputInstalacion, #inputMantenimiento, #inputDiseno {
+    display: none;
 }
+
