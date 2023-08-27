@@ -1,0 +1,19 @@
+{
+    "servicios":[
+        {
+            "servicio":"Instalacion Electrica",
+            "medida":"m2",
+            "precio": 80000
+        },
+        {
+            "servicio":"mantenimiento",
+            "medida":"medidores",
+            "precio": 50000
+        },
+        {
+            "servicio":"diseño",
+            "medida":"m2",
+            "precio": 10000
+        }
+    ]
+}

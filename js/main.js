@@ -8,37 +8,57 @@ Servicio.lista = [];
 
 
 function calcularServicio() {
- 
-  const lista_servicios = ["Instalacion_electrica", "Mantenimiento", "Diseño"];
 
-  let instalacion_electrica = 0;
-  let mantenimiento = 0;
-  let diseño = 0;
+    fetch('js/servicios.json')
+    .then(serv => serv.json())
+    .then(data => {
+      const lista_servicios = data.servicios;
 
-  let checkboxInstalacion = document.getElementById("instalacion");
-  let checkboxMantenimiento = document.getElementById("mantenimiento");
-  let checkboxDiseno = document.getElementById("diseno");
+      let instalacion_electrica = 0;
+      let mantenimiento = 0;
+      let diseño = 0;
 
-  if (checkboxInstalacion.checked) {
-      let mt2_instalacion = parseFloat(document.getElementById("mt2_instalacion").value);
-      instalacion_electrica = mt2_instalacion * 80000;
-  }
+      let checkboxInstalacion = document.getElementById("instalacion");
+      let checkboxMantenimiento = document.getElementById("mantenimiento");
+      let checkboxDiseno = document.getElementById("diseno");
 
-  if (checkboxMantenimiento.checked) {
-      let medidores = parseInt(document.getElementById("medidores").value);
-      mantenimiento = medidores * 50000;
-  }
+      lista_servicios.forEach(servicioInfo => {
+        const servicioNombre = servicioInfo.servicio.toLowerCase();
 
-  if (checkboxDiseno.checked) {
-      let mt2_diseño = parseFloat(document.getElementById("mt2_diseno").value);
-      diseño = mt2_diseño * 10000;
-  }
+        if (checkboxInstalacion.checked && servicioNombre === "instalacion electrica") {
+          let mt2_instalacion = parseFloat(document.getElementById("mt2_instalacion").value);
+          instalacion_electrica = mt2_instalacion * servicioInfo.precio;
+          if (instalacion_electrica < 0){
+            Swal.fire('Valor negativo')
+            instalacion_electrica = 0
+          }
+        }
 
-  let servicio1 = new Servicio("Instalacion electrica", instalacion_electrica);
-  let servicio2 = new Servicio("Mantenimiento", mantenimiento);
-  let servicio3 = new Servicio("Diseño", diseño);
+        if (checkboxMantenimiento.checked && servicioNombre === "mantenimiento") {
+          let medidores = parseInt(document.getElementById("medidores").value);
+          mantenimiento = medidores * servicioInfo.precio;
+          if (mantenimiento < 0){
+            Swal.fire('Valor negativo')
+            mantenimiento = 0
+          }
+        }
 
-  Servicio.lista = [servicio1, servicio2, servicio3];
+        if (checkboxDiseno.checked && servicioNombre === "diseño") {
+          let mt2_diseño = parseFloat(document.getElementById("mt2_diseno").value);
+          diseño = mt2_diseño * servicioInfo.precio;
+          if (diseño < 0){
+            Swal.fire('Valor negativo')
+            diseño = 0
+          }
+        }
+      });
+
+      let servicio1 = new Servicio("Instalacion electrica", instalacion_electrica);
+      let servicio2 = new Servicio("Mantenimiento", mantenimiento);
+      let servicio3 = new Servicio("Diseño", diseño);
+
+      Servicio.lista = [servicio1, servicio2, servicio3];
+
 
   let resultadosTable = document.querySelector("#resultados table");
   resultadosTable.innerHTML = `
@@ -60,6 +80,11 @@ function calcularServicio() {
       </tr>
   `;
   localStorage.setItem('servicios', JSON.stringify(Servicio.lista));
+})
+.catch(error => {
+  console.error('Error fetching JSON data:', error);
+});
+  
 
 }
 
@@ -102,6 +127,7 @@ function mostrarResultados() {
       `).join('')}
   `;
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
   if (localStorage.getItem('servicios')) {
